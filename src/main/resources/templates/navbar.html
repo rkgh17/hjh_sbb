@@ -1,0 +1,50 @@
+<!-- 경로 : /sbb/src/main/resources/templates/navbar.html -->
+
+<nav th:fragment="navbarFragment" 
+  class="navbar navbar-expand-lg navbar-light bg-secondary border-bottom">
+    <div class="container-fluid">
+    	
+    	<!-- 홈 링크 -->
+        <a class="navbar-brand text-white" href="/">Home</a>
+        
+        <!-- 토글 아이콘 -->
+        <button class="navbar-toggler fs-6" type="button"
+         style="background-color: white; "
+         data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent" 
+         aria-expanded="false" aria-label="Toggle navigation">
+         	<span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- 부트스트랩 반응형 div -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
+            	<!-- 시각화 링크 -->
+            	<li class="nav-item dropdown">
+            		<a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">시각화</a>
+            		<ul class="dropdown-menu">
+            			<li><a class="dropdown-item" th:href="@{/vis1}">이용자</a></li>
+            			<li><a class="dropdown-item" th:href="@{/vis2}">신규가입</a></li>
+            		</ul>
+            	</li>
+            	
+            	<!-- 게시판 링크 -->
+                <li class="nav-item">
+                    <a class="nav-link text-white" th:href="@{/question/list}">게시판</a>
+                </li>            	
+            
+            	<!-- 로그인 링크 -->
+                <li class="nav-item">
+                    <a class="nav-link text-white" sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a>
+                    <a class="nav-link text-white" sec:authorize="isAuthenticated()" th:href="@{/user/logout}">로그아웃</a>
+                </li>
+                
+                <!-- 회원가입 링크 -->
+                <li class="nav-item">
+                    <a class="nav-link text-white" sec:authorize="isAnonymous()" th:href="@{/user/signup}">회원가입</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

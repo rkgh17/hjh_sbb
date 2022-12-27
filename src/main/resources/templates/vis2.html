@@ -1,0 +1,55 @@
+<!-- 경로 : /sbb/src/main/resources/templates/vis2.html -->
+
+<html layout:decorate="~{layout}">
+<div layout:fragment="content" class="container my-3">
+
+	<!-- 이용자 시각화  -->
+	<div class="container my-3">
+		<div class="card-body">
+			<h2 class="border-bottom py-2 fw-bolder">신규가입 시각화</h2>
+			
+			<div class="container my-2">
+				<div class="card border-dark my-3 mb-5">
+					<img src="/img/따릉이 신규가입 추이.png" 
+						 class="img-responsive" 
+						 alt="..."/>
+					<div class = "card-body">
+						<h4 class="card-title mb-3">따릉이 신규 가입 건수</h4>
+						<p class="card-text mt-4 mb-2">날씨가 좋은 봄과 가을에 가입자 수가 상승</p>
+					</div>
+				</div>
+				
+				<div class="card border-dark my-3 mb-5">
+
+					<img src="/img/따릉이 신규가입 누적.png"
+						 class="img-responsive" 
+						 alt="..."/>
+					<div class = "card-body">
+						<h4 class="card-title mb-3">따릉이 신규 가입 건수 (누적)</h4>
+						<p class="card-text mt-4">신규 가입자 꾸준히 상승추세</p>
+						<p class="card-text mb-2">코로나의 영향으로 인해 2020년 성장세가 이전보다 가파름</p>
+					</div>					
+					
+				</div>				
+				
+				<div class="card border-dark my-3 mb-5">
+
+					<img src="/img/따릉이 연령대별 누적 가입자.png" 
+						 class="img-responsive" 
+						 alt="..."/>
+					<div class = "card-body">
+						<h4 class="card-title mb-3">연령대별 누적 가입자</h4>
+						<p class="card-text mt-4 mb-2">20대 > 30대 > 40대 > 10대 > 50대 > 60대 > 70대 차례로 유지</p>
+					</div>					
+					
+				</div>						
+				
+			</div>
+			
+			<div class="d-flex justify-content-center mt-5">
+				<a class="" th:href="@{/vis1}">&lt- 이전 자료 보기</a>
+			</div>
+		</div>
+	</div>
+</div>
+</html>

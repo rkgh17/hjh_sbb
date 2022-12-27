@@ -1,0 +1,41 @@
+<!-- 경로 : /sbb/src/main/resources/templates/vis1.html -->
+
+<html layout:decorate="~{layout}">
+<div layout:fragment="content" class="container my-3">
+
+	<!-- 이용자 시각화  -->
+	<div class="container my-3">
+		<div class="card-body">
+			<h2 class="border-bottom py-2 fw-bolder">이용자 시각화</h2>
+			
+			<div class="container my-2">
+				<div class="card border-dark my-3 mb-5">
+					<img src="/img/따릉이 이용자 수 추이.png" 
+						 class="img-responsive" 
+						 alt="..."/>
+					<div class = "card-body">
+						<h4 class="card-title mb-3">따릉이 전체 이용자 수 추이</h4>
+						<p class="card-text mt-4">2017이후 따릉이 이용자 수 꾸준히 상승추세</p>
+						<p class="card-text mb-2">날씨의 영향으로 여름과 겨울에는 이용자 수가 감소</p>
+					</div>
+				</div>
+				
+				<div class="card border-dark my-3 mb-5">
+					<img src="/img/따릉이 이용자 수 추이(연도별).png" 
+						 class="img-responsive" 
+						 alt="..."/>
+					<div class = "card-body">
+						<h4 class="card-title mb-3">따릉이 월별 이용자 수 추이</h4>
+						<p class="card-text mb-2">전체 이용자 수 증가에 따라 여름에는 이용자 수가 증가하였으나, 상대적으로 겨울에는 크게 증가하지 못함</p>
+					</div>
+				</div>		
+			</div>
+			
+			<div class="d-flex justify-content-center mt-5">
+				<a class="" th:href="@{/vis2}">다음 자료 보기 -&gt</a>
+			</div>
+			
+		</div>
+	</div>
+</div>
+</html>
